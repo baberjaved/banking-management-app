@@ -1,0 +1,11 @@
+first_account:
+  balance: 100
+  user: first_user
+
+second_account:
+  balance: 50
+  user: second_user
+
+third_account:
+  balance: 150
+  user: third_user

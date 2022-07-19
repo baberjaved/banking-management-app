@@ -1,0 +1,14 @@
+<%= form_for @transaction, url: account_transactions_path(@account), method: :post do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.label :amount, "Amount:", class: 'form-control' %>
+      <%= f.number_field :amount, class: 'form-control', min: '1' %>
+    </div>
+    <div class="col-md-6">
+      <label>Users: </label>
+      <%= select_tag :user, options_from_collection_for_select(@users, 'id', 'email'), prompt: 'Select User', class: 'form-control' %>
+    </div>
+  </div>
+
+  <%= f.submit 'Submit', class: 'btn btn-secondary' %>
+<% end %>

@@ -1,5 +1,5 @@
 {
-  "name": "banking_management_app",
+  "name": "banking_app",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",

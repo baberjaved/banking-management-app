@@ -1,0 +1,14 @@
+first_transaction:
+  account_from: first_account
+  account_to: second_account
+  amount: 10
+
+second_transaction:
+  account_from: second_account
+  account_to: third_account
+  amount: 20
+
+third_transaction:
+  account_from: third_account
+  account_to: first_account
+  amount: 100

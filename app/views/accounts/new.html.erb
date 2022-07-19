@@ -1,0 +1,10 @@
+<%= form_for @account, url: accounts_path, method: :post do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.label :balance, "Balance:", class: 'form-control', min: '1' %>
+      <%= f.number_field :balance, class: 'form-control' %>
+    </div>
+  </div>
+
+  <%= f.submit 'Submit', class: 'btn btn-secondary' %>
+<% end %>

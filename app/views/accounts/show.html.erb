@@ -1,0 +1,23 @@
+<h1>Account Details</h1>
+
+<p>Balance: <%= @account.balance %></p>
+
+<% if @account.present? %>
+  <%= link_to 'Transfer Money', new_account_transaction_path(@account) %>
+<% else %>
+  <%= link_to 'Create Account', new_account_path(current_user) %>
+<% end %>
+
+<h3>Credits Sent</h3>
+
+<% @transactions_from&.each do |transaction| %>
+  <p>Amount: <%= transaction.amount %></p>
+  <p>To: <%= transaction.account_to&.user&.email %></p>
+<% end %>
+
+<h3>Credits Received</h3>
+
+<% @transactions_to&.each do |transaction| %>
+  <p>Amount: <%= transaction.amount %></p>
+  <p>From: <%= transaction.account_from&.user&.email %></p>
+<% end %>
